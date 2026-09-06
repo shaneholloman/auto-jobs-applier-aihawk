@@ -23,18 +23,12 @@
 ## Two ways to use this browser agent
 
 The only question is where the model comes from. If you already use Claude
-Code, Codex or Gemini CLI, take the first: your assistant has the model
-already and you need no new account. If you do not, take the second.
-
-Either way the only thing you need beforehand is **Python 3.11 or newer**,
-which is where `pip` comes from.
+Code, Codex or Gemini CLI, take the first. If you do not, take the second.
+Both need Python 3.11 or newer.
 
 ### 1. From your assistant, over MCP
 
-Your assistant brings the model. You add this browser to it, and nothing
-changes about how you work. Install AIHawk, which brings the browser server
-with it, then the browser itself: about 250 MB, once, where you can watch it
-come down.
+Install AIHawk and fetch the browser:
 
 ```bash
 pip install aihawk
@@ -60,15 +54,6 @@ codex mcp add stealth -- invisible-playwright-mcp
 ```bash
 gemini mcp add --scope user stealth invisible-playwright-mcp
 ```
-
-Then ask your assistant, in the window you already have open:
-
-> Go to news.ycombinator.com and give me the top five titles.
-
-Claude Desktop, Cursor, VS Code, Windsurf, Zed and Cline take a config file
-instead, and the file is not the same shape for all of them. Each one is
-written out in the
-[server's README](https://github.com/feder-cr/invisible-playwright-mcp#adding-it-to-your-client).
 
 ### 2. Standalone: the web UI
 
